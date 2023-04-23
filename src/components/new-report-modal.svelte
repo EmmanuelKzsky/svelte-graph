@@ -32,7 +32,6 @@
                 error = undefined;
                 closeModal();
             } else if (value['error']){
-                console.log(value)
                 error = value['error']['message'].replace("[GraphQL]",'');
             }
         })

@@ -5,17 +5,20 @@
 	"scripts": {
 		"dev:only": "vite dev",
 		"build:only": "vite build",
+		"server": "cd server && npx nodemon index.ts",
 		"tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/tailwind-output.css -w",
 		"tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/tailwind-output.css",
-		"dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\"",
+		"dev": "concurrently \"yarn run dev:only\" \"yarn run tailwind:watch\" \"yarn run server\"",
 		"build": "yarn run tailwind:build && yarn run build:only",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
-		"gen": "graphql-codegen --config codegen.yml"
+		"gen": "graphql-codegen --config codegen.yml",
+		"cypress": "cypress open"
 	},
 	"devDependencies": {
+		"@cypress/svelte": "^2.0.0",
 		"@graphql-codegen/cli": "^3.3.0",
 		"@graphql-codegen/introspection": "^3.0.1",
 		"@graphql-codegen/named-operations-object": "^2.3.1",
@@ -32,8 +35,10 @@
 		"autoprefixer": "^10.4.14",
 		"concurrently": "^8.0.1",
 		"cross-env": "^7.0.3",
+		"cypress": "^12.10.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-cypress": "^2.13.2",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"graphql": "^16.6.0",
 		"postcss": "^8.4.23",
@@ -55,6 +60,7 @@
 		"flowbite": "^1.6.5",
 		"flowbite-svelte": "^0.34.9",
 		"svelte-frappe-charts": "^1.10.0",
+		"uninstall": "^0.0.0",
 		"urql": "^4.0.0",
 		"uuid": "^9.0.0"
 	},

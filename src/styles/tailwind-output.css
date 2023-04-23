@@ -1384,14 +1384,11 @@ input[type="range"].range-lg::-moz-range-thumb {
 .h-px {
   height: 1px;
 }
-.max-h-full {
-  max-height: 100%;
-}
 .max-h-96 {
   max-height: 24rem;
 }
-.max-h-72 {
-  max-height: 18rem;
+.max-h-full {
+  max-height: 100%;
 }
 .w-1 {
   width: 0.25rem;

@@ -29,7 +29,7 @@
 
             <TableBody class="divide-y">
                 {#each rates as rate}
-                    <TableBodyRow>
+                    <TableBodyRow class="table-row-report">
                         <TableBodyCell>{rate.ANG}</TableBodyCell>
                         <TableBodyCell>{rate.USD}</TableBodyCell>
                         <TableBodyCell>{rate.CAD}</TableBodyCell>
