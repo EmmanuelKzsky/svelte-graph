@@ -23,3 +23,17 @@ describe('Error of same report being added', () => {
     cy.contains("Report already added")
   })
 })
+
+describe('Test Navigation', () => {
+
+  it('It Should redirect to about page when the users click on the navbar', () => {
+    cy.visit('http://127.0.0.1:5173')
+
+    cy.contains("Snapstrat")
+    cy.contains("Credits").click()
+    // cy.wait(2000)
+    cy.contains("Emmanuel Castro")
+    cy.contains("Snapstrat").click()
+    cy.contains("Actual Reports")
+  })
+})
