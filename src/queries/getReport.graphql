@@ -1,0 +1,10 @@
+query getReport {
+    getReport{
+        rates {
+            ANG
+            USD
+            CAD
+            date
+        }
+    }
+}

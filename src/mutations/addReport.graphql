@@ -1,0 +1,8 @@
+mutation addReport($rate: RateInput!) {
+    addReport(rate: $rate) {
+        ANG
+        USD
+        CAD
+        date
+    }
+}

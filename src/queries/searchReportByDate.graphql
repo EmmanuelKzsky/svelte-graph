@@ -1,0 +1,8 @@
+query searchReportByDate($date: String!) {
+    searchReportByDate(date: $date) {
+        date
+        ANG
+        USD
+        CAD
+    }
+}
