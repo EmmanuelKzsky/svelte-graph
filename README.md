@@ -19,3 +19,19 @@ To create a production version of your app:
 ```bash
 npm run build
 ```
+
+## Code Generation
+
+The queries , mutations , subscriptions to graphql are being constructed by the [code generator](https://the-guild.dev/graphql/codegen)
+,The command to execute the code generation is:
+
+```bash
+npm run gen
+```
+## Testing
+
+Some e2e has been added with cypress the npm command to open cypress is:
+
+```bash
+npm run cypress
+```
